@@ -15,6 +15,11 @@ public class HelloController {
         return "hello";
     }
 
+    @RequestMapping("/test")
+    public void test(){
+        System.out.println("test");
+    }
+
     @RequestMapping("/upload")
     public void upload(MultipartFile meFile, String fileName) throws UnsupportedEncodingException {
         if (meFile != null) {
